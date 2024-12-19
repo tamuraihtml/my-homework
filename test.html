@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test HTML Page</title>
+  </head>
+  <body>
+    <audio controls>
+      <!-- Саме такий вигляд. Треба змінювати те, що дає VSCode за замовчуванням. controls - ОБОВʼЯЗКОВО -->
+      <source src="./media/AD   Shiverz - Semtex (Automhate Remix).mp3" />
+    </audio>
+    <video controls>
+      <source src="./media/videoplayback.webm" type="video/webm" />
+      <source
+        src="./media/oA5f9e8pGO7aLZPRfRICQ7ge0FIQOArA7NGZpA.mp4"
+        type="video/mp4"
+      />
+      <!-- type потрібен. Браузер спочатку подивиться на нього, щоб зрозуміти чи він його підтримує, бо деякі не підтримують, а webm має переваги - меншу вагу та таку ж високу якість -->
+    </video>
+    <!-- Test table -->
+    <table>
+      <caption>
+        <!-- Заголовок пишеться саме так і тут. Це єдине таке виключення -->
+        TITLE
+      </caption>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Full Name</th>
+          <th>Position</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Bill Gates</td>
+          <td>Founuder Microsoft</td>
+          <td rowspan="2">$1000</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Bill Gates</td>
+          <td>Founuder Microsoft</td>
+          <!-- <td>$1000</td> -->
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Bill Gates</td>
+          <td>Founuder Microsoft</td>
+          <td>$1000</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Bill Gates</td>
+          <td>Founuder Microsoft</td>
+          <td>$1000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>$4000</td>
+        </tr>
+      </tfoot>
+    </table>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316138.05304081587!2d10.825163940074916!3d51.754458810441676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a5a2d492193369%3A0x4236659f8058c70!2z0JrQstC10LTQu9C40L3QsdGD0YDQsywg0JPQtdGA0LzQsNC90LjRjw!5e0!3m2!1sru!2sua!4v1734040909495!5m2!1sru!2sua"
+      width="600"
+      height="450"
+    ></iframe>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/NcjXszL4xRk?si=XiOFPTVM3nesAK68"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <p>Заголовок на сторінці виділяється тегом &lt;h1&gt;</p>
+    <p>&copy;All Rights Reserved</p>
+  </body>
+</html>

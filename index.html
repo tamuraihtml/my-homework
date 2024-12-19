@@ -5,42 +5,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сучасна пекарня</title>
+    <!-- 
+    <style>
+      h1 {
+        background-color: blueviolet;
+      }
+    </style> -- Стилі можуть бути embedded (вбудовані) -->
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Стилі можуть бути external (зовнішні) - 90% випадків -->
   </head>
   <body>
     <header>
       <nav>
         <!-- nav - навігація. Перехід до інших розділів сайту -->
-        <a href="#">
+        <a href="/">
+          <!-- тут може бути index.html, але може бути просто /. Але це лише для файлу index буде працювати -->
           <!-- logo. З фігми треба брати тільки SVG -->
           <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
         </a>
         <ul>
-          <li><a href="#">Франшиза</a></li>
+          <li><a class="link" href="#traditions-section">Наші традиції</a></li>
+          <!-- через # вказуємо шлях до нашої відповідної сторінки -->
           <!-- # - це просто заглушка -->
-          <li><a href="#">Наші традиції</a></li>
-          <li><a href="#">Формати</a></li>
-          <li><a href="#">Контакти</a></li>
+          <li><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
+          <li><a class="link" href="#format-section">Формати</a></li>
+          <li><a class="link" href="#contact-section">Контакти</a></li>
         </ul>
       </nav>
-      <button type="button">Замовити дзвінок</button>
+      <button class="button" type="button">Замовити дзвінок</button>
+
       <!-- У button завжди повинен бути type -->
       <!-- button - щось відкриває, типу меню, змінити тему і тд. А якщо кнопка відправляє дані на сервер, то вона буде мати значення submit. Воно стає за замовчуванням, а це нам не треба. Не правильно -->
       <!-- call me -->
     </header>
     <main>
       <!-- вся інфо після хедера. тут будуть секції - цеглинка веб-сторінки -->
-      <!-- span - додається з метой стилізації, яка робиться у css -->
+      <!-- span - додається з метою стилізації, яка робиться у css -->
       <section>
-        <h1>Сучасна пекарня</h1>
+        <h1 class="hero-title"><span class="accent">Сучасна</span> пекарня</h1>
+        <!-- class="main-title" клас у <h1> -->
+        <!-- id="main-title" клас у <h1> -->
+
+        <!-- style="color: burlywood" -- Стилі можуть бути inline -->
         <!-- в кожній секції повинен бути заголовок. не може бути два однакових (h1 та h1). на сторінці повинен бути один h1 -->
       </section>
-      <section>
-        <ul>
+      <section id="traditions-section">
+        <ul class="advantages-list">
           <li>Великий попит на ринку</li>
           <li>Доступні за бюджетом формати</li>
           <li>Досвідчена управлінська команда</li>
         </ul>
-        <h2>Новий формат традицій</h2>
+        <h2 class="section-title">Новий формат традицій</h2>
         <p>
           <span>shop bakery</span> — це пекарня, яка взяла все найкраще, і
           зберегла смак традиційної випічки та натуральність інгредієнтів.
@@ -55,8 +71,10 @@
           alt="Чоловік пекар дивиться на батони із посмішкою"
         />
       </section>
-      <section>
-        <h2>Наші найкращі шеф-кухарі</h2>
+      <section id="chefs-section">
+        <h2 class="section-title">
+          Наші найкращі <span class="accent">шеф-кухарі</span>
+        </h2>
         <ul>
           <li>
             <article>
@@ -79,8 +97,8 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h2>Формати</h2>
+      <section id="format-section">
+        <h2 class="section-title">Формати</h2>
         <ul>
           <li>
             <article>
@@ -99,8 +117,13 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h2>Приєднуйтеся до мережі пекарень</h2>
+      <section id="contact-section">
+        <h2 class="section-title">Приєднуйтеся до мережі пекарень</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.163630435281!2d30.488698376557704!3d50.45667757159333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0YPQuy4g0KHQtdGH0LXQstGL0YUg0KHRgtGA0LXQu9GM0YbQvtCyLCA1NCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1734041166280!5m2!1sru!2sua"
+          width="603"
+          height="595"
+        ></iframe>
       </section>
       <!-- буде тег article - картки на сайті, або елементи, які можуть повторно використовуватися -->
       <!-- aside - сайдбар, рекламний банер. частина сторінки, яка опосередковано повʼязана з основним змістом -->
@@ -113,35 +136,40 @@
           <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
         </a>
         <ul>
-          <li><a href="#">Франшиза</a></li>
-          <!-- # - це просто заглушка -->
           <li><a href="#">Наші традиції</a></li>
+          <!-- # - це просто заглушка -->
+          <li><a href="#">Шеф-кухарі</a></li>
           <li><a href="#">Формати</a></li>
           <li><a href="#">Контакти</a></li>
         </ul>
       </nav>
       <address>
         <!-- Тут вказуємо номер та адресу. Фізичну і електронну. Соц. мережі. Далі ВАЖЛИВА інфо по номеру, пошті та адресі -->
-        <li><a href="tel:+380960000007">+ 38 (096) 000 00 07</a></li>
-        <li><a href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a></li>
-        <li>
-          <a href="https://g.co/kgs/aRyvUY2" target="_blank">
-            <!-- target="_blank" - щоб відкрити на новій вкладці -->
-            Україна, м. Київ, вул. Січових Стрільців 54
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <!-- facebook icon -->
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <!-- instagram icon -->
-          </a>
-        </li>
+        <ul>
+          <li><a href="tel:+380960000007">+ 38 (096) 000 00 07</a></li>
+          <li>
+            <a href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a>
+          </li>
+          <li>
+            <a href="https://g.co/kgs/aRyvUY2" target="_blank">
+              <!-- target="_blank" - щоб відкрити на новій вкладці -->
+              Україна, м. Київ, вул. Січових Стрільців 54
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <!-- facebook icon -->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <!-- instagram icon -->
+            </a>
+          </li>
+        </ul>
         <a href="#" target="_blank">Політика конфіденційності</a>
-        <p>© 2023 Дані захищені</p>
+        <p>&copy; 2023 Дані захищені</p>
+        <!-- &copy - так вставляємо спецсимволи -->
       </address>
     </footer>
   </body>
